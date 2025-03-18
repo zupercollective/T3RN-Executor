@@ -44,14 +44,13 @@ mkdir t3rn && cd t3rn
 ### Download latest release
 ```
 curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | \
-grep -o '"tag_name": "[^"]*' | \
-cut -d'"' -f4 | \
-xargs -I {} curl -LO https://github.com/t3rn/executor-release/releases/download/{}/executor-macos-{}.tar.gz
+grep -Po '"tag_name": "\K.*?(?=")' | \
+xargs -I {} wget https://github.com/t3rn/executor-release/releases/download/{}/executor-linux-{}.tar.gz
 ```
 
 ### Ekstrak
 ```
-tar -xzf executor-macos-*.tar.gz
+tar -xzf executor-linux-*.tar.gz
 ```
 
 ### Navigasi ke folder BIN
@@ -59,11 +58,49 @@ tar -xzf executor-macos-*.tar.gz
 cd executor/executor/bin
 ```
 
-## Menjalankan XXX
-
-### Run XXX
+### Setting Enviroment
 ```
-code blocks for commands
+export ENVIRONMENT=testnet
+export LOG_LEVEL=debug
+export LOG_PRETTY=false
+export EXECUTOR_PROCESS_BIDS_ENABLED=true
+export EXECUTOR_PROCESS_ORDERS_ENABLED=true
+export EXECUTOR_PROCESS_CLAIMS_ENABLED=true
+```
+
+### Set network & RPC
+```
+export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn'
+```
+
+### Set RPC URL
+```
+export RPC_ENDPOINTS='{
+    "l2rn": ["https://b2n.rpc.caldera.xyz/http"],
+    "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
+    "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
+    "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
+    "unit": ["https://unichain-sepolia.drpc.org", "https://sepolia.unichain.org"]
+}'
+```
+
+### Set Private Key (bisa bikin wallet baru dulu di Rabby/Metamask
+```
+export PRIVATE_KEY_LOCAL=isi private key kalian
+```
+
+### Claim faucet menggunakan address yang telah dibuat
+```
+https://faucet.brn.t3rn.io/
+```
+
+## Cara menjalankan T3RN Executor
+
+### Untuk bisa running di background, kita pake screen (bagi yang udah install screen bisa skip cara ini)
+```
+sudo apt-get install screen
+
+screen -Rd tern
 ```
 
 ## Help
