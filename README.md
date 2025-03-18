@@ -1,38 +1,62 @@
-Penulis: [nama_penulis](link_twt)
+Penulis: [sbjnk](https://x.com/sbjnk_)
 
 # Pengenalan
-Bab ini berisi pengenalan mengenai nama_project
+Bab ini berisi pengenalan mengenai T3RN Executor
 
-## Nama_Project
+## T3RN
 > [!NOTE]
-> berikan_description_singkat_mengenai_project_tersebut
+> Modular, Cross chain, Polkadot eco
 
 ### Investor
-taroh_img_investor_jika_ada
+![Screenshot 2025-03-19 052400](https://github.com/user-attachments/assets/cbfbbdaa-b1e2-4027-b574-8b581c08e83d)
+
 
 # Tutorial XXX
-Bab ini berisi tutorial cara menjalankan XXX
+Bab ini berisi tutorial cara menjalankan T3RN Executor
 
 ## Requirement
-Syarat menjalankan XXX
+Syarat menjalankan T3RN Executor
 - Spek Komputer
   
 | Name | Minimum |
 | ------------- | ------------- |
-| Operating System  | OS_NAME  |
-| CPU  | X Cores  |
-| RAM  | X GB  |
-| SSD  | XX GB  |
+| Operating System  | Linux, MacOS, Windows(WSL)  |
+| CPU  | 4 Cores  |
+| RAM  | 8 GB  |
+| SSD  | 200 GB  |
 - item_2_dan_seterusnya_jika_ada
 
 > [!TIP]
-> Kami menggunakan Digital Ocean dengan speksifikasi `XX/ X Core/ X GB RAM/ XX GB SSD`. Jika kamu membutuhkan VPS, kami memiliki link gratis credit VPS DigitalOcean sebesar $200. Cukup untuk menjalankan XXX selama XX . Daftar sekarang dengan [link utama](link_reff_do_kamu) / [link cadangan](link_reff_do_2_kamu) untuk mendapatkannya.
+> Kami menggunakan Contabo dengan speksifikasi `Linux/ 4 Core/ 8 GB RAM/ 200 GB SSD`. Jika kamu membutuhkan VPS, kami memiliki link gratis credit VPS DigitalOcean sebesar $200. Cukup untuk menjalankan XXX selama XX . Daftar sekarang dengan [link utama](link_reff_do_kamu) / [link cadangan](link_reff_do_2_kamu) untuk mendapatkannya.
   
 ## Dependencies
 
-### Install X 
+### Update
 ```
-sudo apt-get install xxxx
+sudo apt update && apt upgrade
+```
+
+### Buat direktori t3rn
+```
+mkdir t3rn && cd t3rn
+```
+
+### Download latest release
+```
+curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | \
+grep -o '"tag_name": "[^"]*' | \
+cut -d'"' -f4 | \
+xargs -I {} curl -LO https://github.com/t3rn/executor-release/releases/download/{}/executor-macos-{}.tar.gz
+```
+
+### Ekstrak
+```
+tar -xzf executor-macos-*.tar.gz
+```
+
+### Navigasi ke folder BIN
+```
+cd executor/executor/bin
 ```
 
 ## Menjalankan XXX
