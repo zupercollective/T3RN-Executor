@@ -11,7 +11,7 @@ Bab ini berisi pengenalan mengenai T3RN Executor
 ![Screenshot 2025-03-19 052400](https://github.com/user-attachments/assets/cbfbbdaa-b1e2-4027-b574-8b581c08e83d)
 
 
-# Tutorial XXX
+# Tutorial T3RN
 Bab ini berisi tutorial cara menjalankan T3RN Executor
 
 ## Requirement
@@ -24,7 +24,7 @@ Syarat menjalankan T3RN Executor
 | CPU  | 4 Cores  |
 | RAM  | 8 GB  |
 | SSD  | 200 GB  |
-- item_2_dan_seterusnya_jika_ada
+
 
 > [!TIP]
 > Kami menggunakan Contabo dengan speksifikasi `Linux/ 4 Core/ 8 GB RAM/ 200 GB SSD`. Jika kamu membutuhkan VPS, kami memiliki link gratis credit VPS DigitalOcean sebesar $200. Cukup untuk menjalankan XXX selama XX . Daftar sekarang dengan [link utama](link_reff_do_kamu) / [link cadangan](link_reff_do_2_kamu) untuk mendapatkannya.
@@ -90,9 +90,9 @@ export PRIVATE_KEY_LOCAL=isi private key kalian
 ```
 
 ### Claim faucet menggunakan address yang telah dibuat
-```
-https://faucet.brn.t3rn.io/
-```
+https://faucet.brn.t3rn.io/ | BRN
+https://arbitrum.faucet.dev/ArbSepolia | ARB Sepo
+https://docs.optimism.io/app-developers/tools/build/faucets
 
 ## Cara menjalankan T3RN Executor
 
@@ -102,6 +102,14 @@ sudo apt-get install screen
 
 screen -Rd tern
 ```
+
+### Menjalan Executor
+```
+./executor
+```
+### Jika muncul log seperti dibawah berarti berhasil! kalian bisa menutup screen nya dengan cara CTRL + A + D
+![Screenshot 2025-03-19 065901](https://github.com/user-attachments/assets/326b3406-aa86-437d-bfc9-30c6c5e5639d)
+
 
 ## Help
 
@@ -115,4 +123,4 @@ Join komunitas [Discord ZuperHunt](https://t.co/n7TeWVlA48) jika kamu ada pertan
 ## Acknowledgments
 
 Referensi
-* [nama_referensi](link_referensi)
+* [Binary Setup by t3rn](https://docs.t3rn.io/executor/become-an-executor/binary-setup)
