@@ -27,7 +27,7 @@ Syarat menjalankan T3RN Executor
 
 
 > [!TIP]
-> Kami menggunakan Contabo dengan speksifikasi `Linux/ 4 Core/ 8 GB RAM/ 200 GB SSD`. Jika kamu membutuhkan VPS, kami memiliki link gratis credit VPS DigitalOcean sebesar $200. Cukup untuk menjalankan XXX selama XX . Daftar sekarang dengan [link utama](link_reff_do_kamu) / [link cadangan](link_reff_do_2_kamu) untuk mendapatkannya.
+> Kami menggunakan Contabo dengan speksifikasi `Linux/ 4 Core/ 8 GB RAM/ 200 GB SSD`.
   
 ## Dependencies
 
@@ -48,7 +48,7 @@ grep -Po '"tag_name": "\K.*?(?=")' | \
 xargs -I {} wget https://github.com/t3rn/executor-release/releases/download/{}/executor-linux-{}.tar.gz
 ```
 
-### Ekstrak
+### Ekstrak arsip
 ```
 tar -xzf executor-linux-*.tar.gz
 ```
@@ -86,7 +86,7 @@ export RPC_ENDPOINTS='{
 
 ### Set Private Key (bisa bikin wallet baru dulu di Rabby/Metamask
 ```
-export PRIVATE_KEY_LOCAL=isi private key kalian
+export PRIVATE_KEY_LOCAL=private key kalian
 ```
 
 ### Claim faucet menggunakan address yang telah dibuat
