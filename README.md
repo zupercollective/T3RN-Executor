@@ -90,9 +90,11 @@ export PRIVATE_KEY_LOCAL=private key kalian
 ```
 
 ### Claim faucet menggunakan address yang telah dibuat
-|https://faucet.brn.t3rn.io/ | BRN |
-|https://arbitrum.faucet.dev/ArbSepolia | ARB Sepolia |
-|https://docs.optimism.io/app-developers/tools/build/faucets | OP Sepolia
+| Name | Link Faucet |
+| ------------- | ------------- |
+| BRN  | https://faucet.brn.t3rn.io/ |
+| ARB Sepo  | https://arbitrum.faucet.dev/ArbSepolia |
+| OP Sepo  | https://docs.optimism.io/app-developers/tools/build/faucets |
 
 ## Cara menjalankan T3RN Executor
 
