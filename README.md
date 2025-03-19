@@ -103,6 +103,10 @@ export PRIVATE_KEY_LOCAL=private key kalian
 sudo apt-get install screen
 
 screen -Rd tern
+
+cd t3rn
+
+cd executor/executor/bin
 ```
 
 ### Menjalan Executor
